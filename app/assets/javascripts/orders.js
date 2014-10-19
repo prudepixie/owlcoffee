@@ -62,6 +62,34 @@ $(document).ready(function(){
     }
   });
 
+  $('.delete-all-order').on('click', function (e){
+    $.ajax({
+      type: 'POST',
+      dataType: 'json',
+      url: '/orders/destroy_all',
+      data: {'_method': 'delete'},
+      complete: function(){
+        $('.order-table td').remove()
+      }
+    });
+    e.preventDefault()
+  });
+  // $('.cancel').on('click', function (e) {
+  //   $.ajax({
+  //     type:'POST',
+  //     dataType: 'json',
+  //     url: '/orders/',
+  //     data: {'_method':'delete'},
+  //     complete: function () {
+  //       $('order-table').remove()
+  //     }
+  //   });
+  //   e.preventDefault()
+  // })
+  $('.cancel-order').bind('ajax:success', function(){
+    $(this).closest('tr').fadeOut('fast')
+  })
+
   function beverage(coffee) {
     $('.hidden_cafe').attr('value', coffee)
   }

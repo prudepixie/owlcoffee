@@ -1,6 +1,6 @@
 <section class='oval-container centered none'>
   <div class="oval-thought">
-    <table align="center" cellspacing="50px">
+    <table align="center" cellspacing="50px" class="order-table">
       <thead>
         <tr>
           <th class="list-name">Name</th>
@@ -14,10 +14,11 @@
           <tr >
             <td><%= order.name %></td>
             <td><%= order.order %> <%= order.coffee%></td>
-            <td><%= link_to 'Cancel', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <td><%= link_to 'Cancel', order, method: :delete, data: { confirm: 'Are you sure?' }, :remote => true, :class => 'cancel-order' %></td>
           </tr>
         <% end %>
       <span class="new-order"><%= link_to 'I want a new order', new_order_path %></span>
+      <span class="delete-all-order"><a>Delete All</a></span>
       </tbody>
     </table>
   </div>

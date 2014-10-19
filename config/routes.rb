@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  delete 'orders/destroy_all' => 'orders#destroy_all'
   resources :orders
   root 'orders#index'
   # The priority is based upon order of creation: first created -> highest priority.
