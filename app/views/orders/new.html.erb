@@ -1,0 +1,86 @@
+<section class="orders">
+
+  <div class="coffee-choices-container centered" >
+    <div class="coffee-choice americano" data-coffee='Americano'>
+      <i class="steam fa fa-stumbleupon"></i>
+      <i class="fa fa-coffee fa-4x"></i></br>Americano
+    </div>
+    <div class="coffee-choice latte" data-coffee='Latte'>
+      <i class="steam fa fa-stumbleupon"></i>
+      <i class="fa fa-coffee fa-4x"></i></br>Latte
+    </div>
+    <div class="coffee-choice cappucino" data-coffee='Cappuccino'>
+      <i class="steam fa fa-stumbleupon"></i>
+      <i class="fa fa-coffee fa-4x"></i></br>Cappuccino
+    </div>
+    <div class="coffee-choice mocha" data-coffee='Mocha'>
+      <i class="steam fa fa-stumbleupon"></i>
+      <i class="fa fa-coffee fa-4x"></i></br>Mocha
+    </div>
+  </div>
+  <%= render 'form' %>
+
+  <!-- <%= link_to 'Back', orders_path %> -->
+  <section class='oval-container centered none '>
+    <div class="oval-thought">
+      <section class='pick-a-cup'>
+        <p class='time'>It's time for owls to refresh and get a coffee, pick a cup.</p>
+      </section>
+      <section class='hoo'>
+        <p class='owl'> Hooo the owl are you?<br>
+        <input type="text" class="name"/>
+        <button class="button ok">ok </button>
+      </p>
+      </section>
+    <section class="coffee-selection centered">
+      <div class="coffee-form">
+      <%=form_tag '/orders', :method => 'post' do%>
+        <ul class="specify">
+          <li class ="welcome">Specifications:</li>
+          <li>
+            <p>
+            <%= label_tag 'Iced', nil, :class => 'specify iced'%>
+            <%= check_box_tag 'icedcoffee[]' %>
+            </p>
+          </li>
+          <li>
+            <p>
+          <%= label_tag 'Baby Size', nil, :class => 'specify baby'%>
+          <%= check_box_tag 'baby[]' %>
+            </p>
+          </li>
+          <li>
+            <p>
+          <%= label_tag 'Decaf', nil, :class => 'specify decaf'%>
+          <%= check_box_tag 'decaf[]' %>
+            </p>
+          </li>
+          <li>
+            <p>
+          <%= label_tag 'Just Regular ', nil, :class => 'specify other'%>
+          <%= check_box_tag 'other[]' %>
+            </p>
+          </li>
+          <%= hidden_field_tag 'hidden_name', nil, :class=> "hidden_shit"%>
+          <%= hidden_field_tag 'hidden_coffee', nil, :class=> "hidden_cafe"%>
+
+          <%= submit_tag 'Submit Order', :class => 'button submit'%>
+        </ul>
+      </div>
+      <% end %>
+
+    </section>
+    </div>
+     <!-- <h1>Dynamic Owl Coffee Time</h1> -->
+  </section>
+<div class="circle one none"></div>
+<div class="placeholder"></div>
+<div class="circle two none"></div>
+<div class="placeholder-2"></div>
+<div class="circle three none"></div>
+  <div class="owl-background">
+    <img src="/assets/hipster_owl.jpg">
+  </div>
+</section>
+
+

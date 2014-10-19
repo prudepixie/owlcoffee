@@ -1,0 +1,36 @@
+<section class='oval-container centered none'>
+  <div class="oval-thought">
+    <table align="center" cellspacing="50px">
+      <thead>
+        <tr>
+          <th class="list-name">Name</th>
+          <th class="list-order">Order</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @orders.each do |order| %>
+          <tr >
+            <td><%= order.name %></td>
+            <td><%= order.order %> <%= order.coffee%></td>
+            <td><%= link_to 'Cancel', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      <span class="new-order"><%= link_to 'I want a new order', new_order_path %></span>
+      </tbody>
+    </table>
+  </div>
+</section>
+<div class="circle one none"></div>
+<div class="placeholder"></div>
+<div class="circle two none"></div>
+<div class="placeholder-2"></div>
+<div class="circle three none"></div>
+<div class="owl-background">
+  <img src="/assets/hipster_owl.jpg">
+</div>
+
+
+
+

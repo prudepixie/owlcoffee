@@ -1,0 +1,222 @@
+.orders{
+  // Place all the styles related to the Orders controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+  .hi{
+    font-size: 90px;
+  }
+
+  h2{
+    font-size: 70px;
+  }
+  h1 {
+    font-size: 70px;
+    font-family: 'Lekton', Helvetica, Arial, sans-serif;
+  }
+
+  .centered{
+    display: block;
+    margin: 0 auto;
+  }
+
+  .coffee-choices-container {
+    height: 200px;
+    font-size: 20px;
+    margin-right: 5%;
+    max-width: 650px;
+    .coffee-choice {
+      width: 16%;
+      float: left;
+      margin-top: 2em;
+      margin-right: 34px;
+      text-align: center;
+      font-family: 'Lekton', Helvetica, Arial, sans-serif;
+      font-weight: bold;
+      position: relative;
+      &:hover, &:active {
+        color:grey;
+      }
+      // padding: 5px;
+      .steam {
+        display: none;
+        &:before {
+          transform: rotate(90deg);
+          -webkit-transform: rotate(90deg);
+          position: absolute;
+          top: -23px;
+          right: 40px;
+          color: grey;
+          font-size: 25px;
+        }
+        &:before:hover {
+          color: grey;
+        }
+      }
+    }
+  }
+
+  // .decaf, .iced, .baby, .other {
+  //   font-size: 25px;
+  //   font-family: monospace;
+  //   // bottom: 6px;
+  //   // left: 40px;
+  //   // width: 200px;
+  //   // text-align: left;
+  //   color: #6EBDAE;
+  // }
+
+
+
+  .oval-container{
+    max-width: 100%;
+    min-height: 350px;
+    position: absolute;
+    top: 200px;
+    right: 10px;
+
+    .oval-thought {
+      width: 600px;
+      height: 350px;
+      border: 1px solid black;
+      text-align: center;
+      color: grey;
+      border-radius: 120px / 130px;
+      background: black;
+      margin-right: 100px;
+      margin-top: 2%;
+      .new-order a {
+        position: absolute;
+        bottom: 3%;
+        left: 18%;
+        border: 1px solid;
+        padding: 3px 15px;
+        color: grey;
+        text-decoration: none;
+      }
+      .time, .owl  {
+        font-size: 25px;
+        font-family: monospace;
+        color: rgb(196, 186, 186);
+        padding: 40px;
+        line-height: 3;
+        height: auto;
+        }
+      tr {
+        text-align: left;
+      }
+      td {
+        font-size: 22px;
+        font-family: monospace;
+        a {
+          color: black;
+          background: grey;
+          &:hover {
+            color: grey;
+            background: black;
+          }
+        }
+      }
+    }
+  }
+
+    .coffee-selection{
+      display: none;
+      width: 236px;
+      .coffee-form{
+        margin-top: -20px;
+      }
+    }
+    .hoo{
+      display: none;
+    }
+
+  .specify {
+    padding-top: 0%;
+    padding-bottom: 0%;
+    padding-left: 0%;
+    text-align: left;
+    li, p {
+      line-height: 40px;
+      margin-top: 29px ;
+      list-style: none;
+      max-width: 250px;
+      font-size: 25px;
+      font-family: monospace;
+      color: rgb(196, 186, 186);
+    }
+  }
+
+  .button{
+    margin-top: 40px !important;
+  }
+  .submit {
+    position: absolute;
+    bottom: 10%;
+    right: 20%;
+  }
+
+
+  .owl-background {
+    max-width: 800px;
+    position: absolute;
+    left: 0;
+    top: 450px;
+    z-index: -1;
+    img {
+      margin-left: -200px;
+      width: 100%;
+    }
+  }
+  .circle {
+      width: 25px;
+      height: 25px;
+      -moz-border-radius: 50%;
+      -webkit-border-radius: 50%;
+      border-radius: 50%;
+      background: black;
+      margin-left: 20%;
+      margin-top: -40px;
+      &.two {
+        margin-left: 29%;
+        margin-top: 30px;
+        width: 38px;
+        height: 38px;
+      }
+      &.one {
+        margin-top: 250px;
+        margin-left: 40%;
+        width: 60px;
+        height: 60px;
+      }
+  }
+       .placeholder{
+          margin-top:250px;
+          margin-left: 40%;
+          width: 60px;
+          height: 60px;
+        }
+        .placeholder-2{
+          margin-left: 29%;
+          margin-top: 30px;
+          width: 38px;
+          height: 38px;
+        }
+
+
+//list orders
+  .list-name, .list-order {
+    font-size: 24px;
+    font-family: monospace;
+  }
+
+
+  .grey{
+    color: gray;
+  }
+
+  .none {
+    display: none;
+  }
+
+}
