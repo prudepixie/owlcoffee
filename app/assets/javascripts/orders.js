@@ -45,6 +45,19 @@ $(document).ready(function(){
     hoo()
   });
 
+  $('.cancel-order').on('click', function(){
+
+  swal({   title: "Are you sure?",
+           text: "You will not be able to recover!",
+           type: "warning",
+           showCancelButton: true,
+           confirmButtonColor: "#DD6B55",
+           confirmButtonText: "Yes, delete it!",
+           closeOnConfirm: false },
+           function(){   swal("Deleted!", "Your order has been deleted.", "success");
+   });
+  })
+
 
   $('.button.ok').on('click',function(){
     input = $('.name').val()
@@ -86,7 +99,7 @@ $(document).ready(function(){
   //   });
   //   e.preventDefault()
   // })
-  $('.cancel-order').bind('ajax:success', function(){
+  $('.confirm').bind('ajax:success', function(){
     $(this).closest('tr').fadeOut('fast')
   })
 
@@ -100,6 +113,7 @@ $(document).ready(function(){
     $('.coffee-selection').fadeIn(2000)
 
   }
+
 
 
 })

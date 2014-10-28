@@ -23,10 +23,9 @@
   .coffee-choices-container {
     height: 200px;
     font-size: 20px;
-    margin-right: 5%;
-    max-width: 650px;
+    margin-right: 55px;
+    width: 650px;
     .coffee-choice {
-      width: 16%;
       float: left;
       margin-top: 2em;
       margin-right: 34px;
@@ -37,7 +36,6 @@
       &:hover, &:active {
         color:grey;
       }
-      // padding: 5px;
       .steam {
         display: none;
         &:before {
@@ -57,22 +55,15 @@
   }
 
   .oval-container{
-    max-width: 100%;
-    min-height: 350px;
-    position: absolute;
-    top: 200px;
-    right: 10px;
+    float: left;
+    width: 40%;
 
     .oval-thought {
-      width: 600px;
-      height: 350px;
       border: 1px solid black;
       text-align: center;
       color: grey;
       border-radius: 120px / 130px;
       background: black;
-      margin-right: 100px;
-      margin-top: 2%;
       .new-order a {
         position: absolute;
         bottom: 3%;
@@ -82,7 +73,6 @@
         color: grey;
         text-decoration: none;
       }
-
       .time, .owl  {
         font-size: 25px;
         font-family: monospace;
@@ -108,18 +98,16 @@
       }
     }
   }
-
-    .coffee-selection{
-      display: none;
-      width: 236px;
-      .coffee-form{
-        margin-top: -20px;
-      }
+  .coffee-selection{
+    display: none;
+    width: 236px;
+    .coffee-form{
+      margin-top: -20px;
     }
-    .hoo{
-      display: none;
-    }
-
+  }
+  .hoo{
+    display: none;
+  }
   .specify {
     padding-top: 0%;
     padding-bottom: 0%;
@@ -147,37 +135,41 @@
 
 
   .owl-background {
-    max-width: 800px;
-    position: absolute;
+    float: left;
+    width: 33%;
     left: 0;
     top: 450px;
     z-index: -1;
     img {
       margin-left: -200px;
+      margin-top: -55px;
       width: 100%;
     }
   }
-  .circle {
+  .circles {
+    float: left;
+    width: 25%;
+    .circle {
       width: 25px;
       height: 25px;
       -moz-border-radius: 50%;
       -webkit-border-radius: 50%;
       border-radius: 50%;
       background: black;
-      margin-left: 20%;
-      margin-top: -40px;
+      margin-top: -60px;
       &.two {
-        margin-left: 29%;
-        margin-top: 30px;
+        margin-left: 35%;
+        margin-top: 15px;
         width: 38px;
         height: 38px;
       }
       &.one {
-        margin-top: 250px;
-        margin-left: 40%;
+        margin-top: 400px;
+        margin-left: 75%;
         width: 60px;
         height: 60px;
       }
+    }
   }
        .placeholder{
           margin-top:250px;
@@ -198,14 +190,12 @@
     font-size: 24px;
     font-family: monospace;
   }
-
-
   .grey{
     color: gray;
   }
-
   .none {
     display: none;
   }
-
 }
+//media queries
+

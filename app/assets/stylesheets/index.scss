@@ -15,51 +15,13 @@ h2{
   margin: 0 auto;
 }
 
-.coffee-choices-container {
-  height: 200px;
-  font-size: 20px;
-  margin-right: 5%;
-  max-width: 650px;
-  .coffee-choice {
-    width: 16%;
-    float: left;
-    margin-top: 2em;
-    margin-right: 34px;
-    text-align: center;
-    position: relative;
-    &:hover, &:active {
-      color:grey;
-    }
-    // padding: 5px;
-    .steam {
-      display: none;
-      &:before {
-        transform: rotate(90deg);
-        -webkit-transform: rotate(90deg);
-        position: absolute;
-        top: -23px;
-        right: 40px;
-        color: grey;
-        font-size: 25px;
-      }
-      &:before:hover {
-        color: grey;
-      }
-    }
-  }
-}
-
-
 .oval-container{
-  max-width: 100%;
-  position: absolute;
-  margin-right: 6%;
-  top: 30px;
-  right: 50px;
+  float: left;
+  width: 39%;
+  position: relative;
 
 
   .oval-thought {
-    width: 100%;
     min-height: 200px;
     border: 1px solid black;
     text-align: center;
@@ -71,7 +33,7 @@ h2{
     .new-order a, .delete-all-order a {
       position: absolute;
       bottom: 5%;
-      left: 31%;
+      left: 20%;
       font-size: 17px;
       line-height: 1.5;
       border: 1px solid;
@@ -86,7 +48,7 @@ h2{
       }
     }
     .delete-all-order a {
-      left: 74%;
+      left: 55%;
     }
     .time, .owl  {
       font-size: 25px;
@@ -154,51 +116,57 @@ h2{
 
 
 .owl-background {
+  float: left;
+  width: 30%;
   max-width: 800px;
-  position: absolute;
   left: 0;
   top: 240px;
   z-index: -1;
   img {
-    margin-left: -200px;
-    width: 100%;
+    margin-left: -235px;
+    margin-top: 200px;
+    width: 70em;
   }
 }
-.circle {
+
+.circles {
+  float: left;
+  width: 30%;
+  .circle {
     width: 25px;
     height: 25px;
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
     border-radius: 50%;
     background: black;
-    margin-left: 20%;
     margin-top: -40px;
     &.two {
-      margin-left: 29%;
+      margin-left: 40%;
       margin-top: 30px;
       width: 38px;
       height: 38px;
     }
     &.one {
       display: none;
-      margin-top: 250px;
-      margin-left: 40%;
+      margin-top: 300px;
+      margin-left: 80%;
       width: 60px;
       height: 60px;
     }
+  }
+ .placeholder{
+    margin-top:250px;
+    margin-left: 40%;
+    width: 60px;
+    height: 85px;
+  }
+  .placeholder-2{
+    margin-left: 29%;
+    margin-top: 30px;
+    width: 38px;
+    height: 30px;
+  }
 }
-     .placeholder{
-        margin-top:250px;
-        margin-left: 40%;
-        width: 60px;
-        height: 60px;
-      }
-      .placeholder-2{
-        margin-left: 29%;
-        margin-top: 30px;
-        width: 38px;
-        height: 38px;
-      }
 
 
 //list orders
@@ -215,3 +183,26 @@ h2{
 .none {
   display: none;
 }
+
+//media queries
+@media screen and (max-width: 1380px){
+  .owl-background {
+    width: 45%;
+  }
+  .circles {
+    display: none;
+  }
+  .oval-container {
+    width: 55%;
+  }
+}
+
+@media screen and (max-width: 1000px){
+  .owl-background {
+    display: none;
+  }
+   .oval-container {
+    width: 70%;
+  }
+}
+
