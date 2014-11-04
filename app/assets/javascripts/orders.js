@@ -7,8 +7,6 @@ $(document).ready(function(){
 
 
   $(window).load(function(){
-
-
     window.setTimeout(function(){
       $('.circle.three').fadeIn(1000)
     }, 500)
@@ -46,29 +44,50 @@ $(document).ready(function(){
   });
 
   $('.cancel-order').on('click', function(){
-
-  swal({   title: "Are you sure?",
-           text: "You will not be able to recover!",
-           type: "warning",
-           showCancelButton: true,
-           confirmButtonColor: "#DD6B55",
-           confirmButtonText: "Yes, delete it!",
-           closeOnConfirm: false },
-           function(){   swal("Deleted!", "Your order has been deleted.", "success");
-   });
+     var id = $(this).data('id')
+     var parent = $(this).parent('tr')
+      swal({ title: "Are you sure?",
+             text: "No Backsies!",
+             type: "warning",
+             showCancelButton: true,
+             confirmButtonColor: "#DD6B55",
+             confirmButtonText: "Yes, delete it!",
+             closeOnConfirm: false },
+             function(){   swal("Deleted!", "Your order has been deleted.", "success");
+         });
+    confirmDelete(id, parent)
+    confirmCancel()
   })
+
+  function confirmCancel(){
+    $('.cancel').on('click', function(){
+    })
+  }
+
+  function confirmDelete(id, parent){
+  $('.confirm').on('click', function(){
+       $.ajax({
+      type:'POST',
+      dataType: 'json',
+      url: '/orders/' + id,
+      data: {'_method':'delete'},
+      complete: function () {
+        parent.fadeOut(400);
+      }
+    });
+  })
+  }
 
 
   $('.button.ok').on('click',function(){
     input = $('.name').val()
     $('.hoo').fadeOut(1000, function(){
-    $('.hidden_shit').attr('value', input)
+    $('.hidden_name').attr('value', input)
       showForm()
     })
   })
 
   $('.specify').on('change', function(){
-
     if( $(this).siblings(':checked').length >= 0) {
       console.log("this" + this);
       console.log(this.checked);
@@ -82,23 +101,12 @@ $(document).ready(function(){
       url: '/orders/destroy_all',
       data: {'_method': 'delete'},
       complete: function(){
-        $('.order-table td').remove()
+        $('.order-table td').fadeOut(400);
       }
     });
     e.preventDefault()
   });
-  // $('.cancel').on('click', function (e) {
-  //   $.ajax({
-  //     type:'POST',
-  //     dataType: 'json',
-  //     url: '/orders/',
-  //     data: {'_method':'delete'},
-  //     complete: function () {
-  //       $('order-table').remove()
-  //     }
-  //   });
-  //   e.preventDefault()
-  // })
+
   $('.confirm').bind('ajax:success', function(){
     $(this).closest('tr').fadeOut('fast')
   })
@@ -113,7 +121,4 @@ $(document).ready(function(){
     $('.coffee-selection').fadeIn(2000)
 
   }
-
-
-
 })

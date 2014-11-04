@@ -26,13 +26,13 @@
 
         <tbody>
           <% @orders.each do |order| %>
-            <tr >
-              <td><%= order.name %></td>
+            <tr>
+              <td class="order-name" data-status=""><%= order.name %></td>
               <td><%= order.order %> <%= order.coffee%></td>
-              <td><%= link_to 'Cancel', order, method: :delete, :remote => true, :class => 'cancel-order' %></td>
+              <td class="cancel-order" data-id="<%=order.id%>">Cancel</td>
             </tr>
           <% end %>
-        <span class="new-order"><%= link_to 'I want a new order', new_order_path %></span>
+        <span class="new-order"><%= link_to 'New Order', new_order_path %></span>
         <span class="delete-all-order"><a>Delete All</a></span>
         </tbody>
       </table>

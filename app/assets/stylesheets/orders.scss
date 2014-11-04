@@ -23,12 +23,13 @@
   .coffee-choices-container {
     height: 200px;
     font-size: 20px;
-    margin-right: 55px;
-    width: 650px;
+    width: 100%;
+    margin-left: 64%;
     .coffee-choice {
+      cursor: pointer;
       float: left;
       margin-top: 2em;
-      margin-right: 34px;
+      margin-right: 25px;
       text-align: center;
       font-family: 'Lekton', Helvetica, Arial, sans-serif;
       font-weight: bold;
@@ -171,19 +172,18 @@
       }
     }
   }
-       .placeholder{
-          margin-top:250px;
-          margin-left: 40%;
-          width: 60px;
-          height: 60px;
-        }
-        .placeholder-2{
-          margin-left: 29%;
-          margin-top: 30px;
-          width: 38px;
-          height: 38px;
-        }
-
+   .placeholder{
+      margin-top:250px;
+      margin-left: 40%;
+      width: 60px;
+      height: 60px;
+    }
+    .placeholder-2{
+      margin-left: 29%;
+      margin-top: 30px;
+      width: 38px;
+      height: 38px;
+    }
 
 //list orders
   .list-name, .list-order {
@@ -196,6 +196,26 @@
   .none {
     display: none;
   }
-}
 //media queries
+@media screen and (max-width: 1380px){
+  .coffee-choices-container {
+    margin-left: 47%;
+  }
+  .oval-thought {
+    width: 100%;
+  }
+}
 
+@media screen and (max-width: 1000px){
+  .oval-thought {
+    width: 138%;
+    margin-left: 50%;
+  }
+  .owl-background {
+    display: none;
+  }
+  .coffee-choices-container {
+    margin-left: 27%;
+  }
+ }
+}

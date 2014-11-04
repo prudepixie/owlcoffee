@@ -22,7 +22,6 @@ h2{
 
 
   .oval-thought {
-    min-height: 200px;
     border: 1px solid black;
     text-align: center;
     color: grey;
@@ -31,9 +30,11 @@ h2{
     padding-bottom: 90px;
     background: black;
     .new-order a, .delete-all-order a {
+      cursor: pointer;
       position: absolute;
       bottom: 5%;
       left: 20%;
+      width: 18%;
       font-size: 17px;
       line-height: 1.5;
       border: 1px solid;
@@ -195,6 +196,9 @@ h2{
   .oval-container {
     width: 55%;
   }
+  .coffee-choices-container {
+    margin-left: 47%;
+  }
 }
 
 @media screen and (max-width: 1000px){
@@ -203,6 +207,18 @@ h2{
   }
    .oval-container {
     width: 70%;
+    .oval-thought {
+      margin-left: 15%;
+      width: 100%;
+      .new-order a {
+        left: 40%;
+      }
+      .delete-all-order a{
+        left: 85%;
+        margin-left: 10px;
+      }
+    }
   }
+
 }
 
